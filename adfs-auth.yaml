@@ -1,0 +1,6 @@
+---
+- hosts: localhost
+  roles:
+    - install-aws-cli
+    - install-aws-adfs
+    - auth-adfs

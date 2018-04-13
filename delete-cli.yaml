@@ -1,0 +1,5 @@
+---
+- hosts: localhost
+  roles:
+    - uninstall-aws-adfs
+    - uninstall-aws-cli

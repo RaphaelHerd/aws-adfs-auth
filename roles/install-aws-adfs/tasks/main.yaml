@@ -1,0 +1,11 @@
+# https://github.com/venth/aws-adfs
+- name: "Install Python aws-adfs package"
+  command: "pip install aws-adfs"
+
+- name: "Check if Tool is Reachable in Path"
+  command: "aws-adfs --version"
+  register: buckets
+
+- name: "Print Tool Version"
+  debug:
+    var: buckets

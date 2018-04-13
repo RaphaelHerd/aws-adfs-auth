@@ -1,0 +1,4 @@
+adfs_user: usr
+adfs_password: password
+adfs_host: my-adf-host.de
+aws_role_arn: arn:aws:iam::XXXX:role/admin

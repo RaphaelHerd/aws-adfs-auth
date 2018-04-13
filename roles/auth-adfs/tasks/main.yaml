@@ -1,0 +1,14 @@
+---
+- name: "Auth with Bayer ADFS and get sts aws token"
+  command: "aws-adfs login --adfs-host {{ adfs_host }} --env --role-arn {{ aws_role_arn }} --no-ssl-verification"
+  environment:
+    - username: "{{ adfs_user }}"
+    - password: "{{ adfs_password }}"
+
+- name: "Use New Credentials - Get Caller Idendity"
+  command: "aws sts get-caller-identity"
+  register: buckets
+
+- name: "Print Received Identity"
+  debug:
+    var: buckets

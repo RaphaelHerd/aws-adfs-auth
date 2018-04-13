@@ -1,0 +1,11 @@
+# https://github.com/venth/aws-adfs
+- name: "Install Python awscli package"
+  command: "pip install awscli --upgrade --user"
+
+- name: "Check if Tool is Reachable in Path"
+  command: "aws --version"
+  register: buckets
+
+- name: "Print Tool Version"
+  debug:
+    var: buckets

@@ -1,0 +1,3 @@
+# https://github.com/venth/aws-adfs
+- name: "Unistall Python aws-adfs package"
+  command: "pip uninstall -y aws-adfs"
